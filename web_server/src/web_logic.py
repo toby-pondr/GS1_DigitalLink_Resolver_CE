@@ -379,7 +379,7 @@ def _author_link_header_with_pointer_to_linkset(linkset):
     :return: The Link header with a pointer to the linkset.
     """
     identifiers = linkset[0].get("anchor")
-    return f'<https://{os.getenv("FQDN", "set-domain-name-in-env-variable-FQDN.com")}{identifiers}?linkType=linkset>; rel="application/linkset"; type="application/linkset"; title="Linkset for {identifiers}"'
+    return f'<https://{os.getenv("FQDN", "set-domain-name-in-env-variable-FQDN.com")}{identifiers}?linkType=linkset>; rel="linkset"; type="application/linkset+json"; title="Linkset for {identifiers}"'
 
 
 
